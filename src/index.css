@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.form-group {
+  @apply relative mb-6;
+}
+
+.form-group input {
+  @apply w-full px-4 py-3 bg-gray-800/50 border-2 border-gray-700 rounded-lg text-white 
+         placeholder-transparent transition-all duration-300
+         focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20;
+}
+
+.form-group label {
+  @apply absolute left-4 px-1 text-gray-400 transition-all duration-200 
+         transform -translate-y-7 text-sm bg-gray-800 rounded;
+}
+
+.form-group input:placeholder-shown + label {
+  @apply transform translate-y-2 text-base;
+}
+
+.form-group input:focus + label {
+  @apply text-blue-400 transform -translate-y-7 text-sm;
+}
+
+.login-card {
+  @apply animate-[float_6s_ease-in-out_infinite] backdrop-blur-sm bg-gray-800/90;
+}
+
+.login-button {
+  @apply relative overflow-hidden transition-all duration-300 
+         before:absolute before:inset-0 before:bg-gradient-to-r 
+         before:from-blue-600 before:to-blue-400 
+         before:transition-transform before:duration-300
+         hover:before:scale-105 active:before:scale-95;
+}
+
+.login-button span {
+  @apply relative z-10;
+}
+
+/* just addons stles, delete if did not satisfied */
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-gray-700 {
+  background-color: #374151;
+}
+
+.text-gray-900 {
+  color: #1f2937;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.bg-gray-900 {
+  background-color: #111827;
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.bg-green-500 {
+  background-color: #10b981;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-red-400 {
+  color: #f87171;
+}
+
+.hover\:text-red-400:hover {
+  color: #f87171;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
