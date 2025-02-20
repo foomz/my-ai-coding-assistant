@@ -177,6 +177,8 @@ The `Dashboard` component is a key part of the application, providing the chat i
   </form>
 </div>
 ```
+![image](https://github.com/user-attachments/assets/44fd67e6-5c64-4226-b284-bedc911a01c0)
+
 
 ## Getting Started
 
